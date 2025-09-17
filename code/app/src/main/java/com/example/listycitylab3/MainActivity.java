@@ -41,6 +41,13 @@ public class MainActivity extends AppCompatActivity implements AddCityFragment.A
         cityAdapter = new CityArrayAdapter(this, dataList);
         cityList.setAdapter(cityAdapter);
 
+        cityList.setOnItemClickListener((parent, view, position, id) -> {
+            City selectedCity = dataList.get(position);
+            AddCityFragment fragment = AddCityFragment.newInstance(selectedCity);
+            fragment.show(getSupportFragmentManager(), "Edit city");
+            cityAdapter.notifyDataSetChanged(); // refresh list after editing
+        });
+
         FloatingActionButton fab = findViewById(R.id.button_add_city);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,4 +56,11 @@ public class MainActivity extends AppCompatActivity implements AddCityFragment.A
             }
         });
     }
+
+    public CityArrayAdapter getCityAdapter() {
+        return cityAdapter;
+    }
+
+
+
 }
