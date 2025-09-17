@@ -49,7 +49,7 @@ public class AddCityFragment extends DialogFragment {
         EditText editCityName = view.findViewById(R.id.edit_text_city_text);
         EditText editProvinceName = view.findViewById(R.id.edit_text_province_text);
 
-        // Check if editing
+        // Checking if editing
         if (getArguments() != null) {
             editCity = (City) getArguments().getSerializable("city");
             if (editCity != null) {

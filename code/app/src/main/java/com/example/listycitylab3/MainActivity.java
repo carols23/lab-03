@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements AddCityFragment.A
             City selectedCity = dataList.get(position);
             AddCityFragment fragment = AddCityFragment.newInstance(selectedCity);
             fragment.show(getSupportFragmentManager(), "Edit city");
-            cityAdapter.notifyDataSetChanged(); // refresh list after editing
+            cityAdapter.notifyDataSetChanged(); // refreshing list after editing
         });
 
         FloatingActionButton fab = findViewById(R.id.button_add_city);
