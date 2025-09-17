@@ -28,4 +28,13 @@
         android:clipToPadding="false"
         android:padding="8dp" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/add_icon"
+        />
+
 </LinearLayout>
