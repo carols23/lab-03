@@ -29,7 +29,7 @@ public class AddCityFragment extends DialogFragment {
         args.putSerializable("city", city);
         fragment.setArguments(args);
         return fragment;
-    }  //lateradd
+    }  //lateradded
 
     @Override
     public void onAttach(@NonNull Context context) {
